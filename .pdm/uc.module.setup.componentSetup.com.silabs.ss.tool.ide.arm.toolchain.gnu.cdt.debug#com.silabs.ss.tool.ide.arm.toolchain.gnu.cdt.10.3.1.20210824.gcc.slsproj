@@ -141,6 +141,7 @@
           <file name="em_msc_compat.h" uri="studio:/sdk/platform/emlib/inc/em_msc_compat.h"/>
           <file name="em_syscfg.h" uri="studio:/sdk/platform/emlib/inc/em_syscfg.h"/>
           <file name="em_system.h" uri="studio:/sdk/platform/emlib/inc/em_system.h"/>
+          <file name="em_timer.h" uri="studio:/sdk/platform/emlib/inc/em_timer.h"/>
         </folder>
         <folder name="src">
           <file name="em_cmu.c" uri="studio:/sdk/platform/emlib/src/em_cmu.c"/>
@@ -150,6 +151,7 @@
           <file name="em_gpio.c" uri="studio:/sdk/platform/emlib/src/em_gpio.c"/>
           <file name="em_msc.c" uri="studio:/sdk/platform/emlib/src/em_msc.c"/>
           <file name="em_system.c" uri="studio:/sdk/platform/emlib/src/em_system.c"/>
+          <file name="em_timer.c" uri="studio:/sdk/platform/emlib/src/em_timer.c"/>
         </folder>
       </folder>
       <folder name="common">
@@ -209,9 +211,9 @@
       </folder>
     </folder>
   </folder>
-  <file name="app.c" linked="false" uri="studio:/sdk/app/common/example/empty/app.c"/>
-  <file name="main.c" linked="false" uri="studio:/sdk/app/common/example/empty/main.c"/>
-  <file name="app.h" linked="false" uri="studio:/sdk/app/common/example/empty/app.h"/>
+  <file name="app.c" linked="false" uri="studio:/project/app.c"/>
+  <file name="main.c" linked="false" uri="studio:/project/main.c"/>
+  <file name="app.h" linked="false" uri="studio:/project/app.h"/>
   <includePath uri="studio:/project/"/>
   <includePath uri="studio:/sdk/platform/Device/SiliconLabs/EFR32MG24/Include"/>
   <includePath uri="studio:/sdk/hardware/board/inc"/>
