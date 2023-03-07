@@ -6,6 +6,8 @@
  */
 
 #include "src/timers.h"
+#include "src/adxl343.h"
+
 #include <em_timer.h>
 #include <em_cmu.h>
 

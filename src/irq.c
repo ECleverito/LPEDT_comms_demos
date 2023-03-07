@@ -6,7 +6,9 @@
  */
 #include <em_timer.h>
 #include <em_core.h>
+
 #include "src/GPIO.h"
+#include "src/adxl343.h"
 
 void TIMER0_IRQHandler()
 {
@@ -19,6 +21,7 @@ void TIMER0_IRQHandler()
   TIMER_IntClear(TIMER0,flags);
 
   toggleLED0();
+  ADXL_read_flag = true;
 
   CORE_EXIT_CRITICAL();
 

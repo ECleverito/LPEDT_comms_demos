@@ -16,14 +16,24 @@
  ******************************************************************************/
 #include "src/GPIO.h"
 #include "src/timers.h"
+#include "src/I2C.h"
+#include "src/adxl343.h"
+
+#include <stdbool.h>
 /***************************************************************************//**
  * Initialize application.
  ******************************************************************************/
+
+bool ADXL_read_flag;
+
 void app_init(void)
 {
 
   init_LED0();
   init_timer0();
+  init_I2C0();
+
+  ADXL_read_flag = false;
 
 }
 
@@ -32,4 +42,11 @@ void app_init(void)
  ******************************************************************************/
 void app_process_action(void)
 {
+
+  if(ADXL_read_flag)
+    {
+      struct device_id_request_res res = adxl_readDevID();
+      ADXL_read_flag = false;
+    }
+
 }
