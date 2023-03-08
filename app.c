@@ -18,6 +18,8 @@
 #include "src/timers.h"
 #include "src/I2C.h"
 #include "src/adxl343.h"
+#include "src/SPI.h"
+#include "src/XBee.h"
 
 #include <stdbool.h>
 /***************************************************************************//**
@@ -32,6 +34,7 @@ void app_init(void)
   init_LED0();
   init_timer0();
   init_I2C0();
+  init_usart0();
 
   ADXL_read_flag = false;
 
@@ -45,7 +48,8 @@ void app_process_action(void)
 
   if(ADXL_read_flag)
     {
-      struct device_id_request_res res = adxl_readDevID();
+      uint8_t FwVersion[2];
+      queryXBeeFwVersion(FwVersion);
       ADXL_read_flag = false;
     }
 

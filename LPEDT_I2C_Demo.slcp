@@ -30,6 +30,7 @@ component:
 - {id: brd4002a}
 - {id: brd4186c}
 - {id: emlib_timer}
+- {id: emlib_usart}
 define:
 - {name: DEBUG_EFM}
 ui_hints: {}
